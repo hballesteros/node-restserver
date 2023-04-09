@@ -1,6 +1,4 @@
 const jwt = require('jsonwebtoken')
-const { object } = require('prop-types')
-
 
 const generarJWT = ( uid = '' ) => {
 
