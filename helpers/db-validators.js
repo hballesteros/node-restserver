@@ -22,6 +22,8 @@ const existeUsuarioPorId = async( id ) => {
     }
 }
 
+// existeCategoria -> parecido a existeUsuarioPorId
+
 module.exports = {
     esRoleValido,
     emailExiste,
