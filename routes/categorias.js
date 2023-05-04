@@ -27,14 +27,14 @@ router.get('/:id',[
 // Crear una categoría - privado - cualquiera con token válido
 router.post('/', [ 
     validarJWT,
-    check('nombre','El nombre es obligatorio').not().isEmpty(),
+    check('nombre','El nombre de la categoria es obligatorio').not().isEmpty(),
     validarCampos
     ], crearCategoria)
 
 // Actualizar - privado - cualquiera con token válido
 router.put('/:id', [
     validarJWT,
-    check('nombre', 'El nombre de la categoria es obligatorio').not().isEmpty(),
+    check('nombre', 'El nuevo nombre de la categoria es obligatorio').not().isEmpty(),
     check('id').custom( existeCategoriaPorId ),
     validarCampos
 ], actualizarCategoria )
